@@ -25,6 +25,7 @@ function App() {
         <MainContent />
         <UserProfile name="John Doe" age={30} bio="New York, USA" />
         <UserProfile name="Jane Smith" age={25} bio="London, UK" />
+        <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
       </div>
       <h1>Vite + React</h1>
       <div className="card">
