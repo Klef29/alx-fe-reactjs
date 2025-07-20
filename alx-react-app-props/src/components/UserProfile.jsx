@@ -1,14 +1,15 @@
-import ProfilePage from "./ProfilePage";
+import { useContext } from "react";
+import UserContext from "../UserContext";
 
-const UserProfile = (props) => {
+function UserProfile() {
+  const userData = useContext(UserContext);
+
   return (
     <div>
-      <h2>{props.name}</h2>
-      <p>Age: {props.age}</p>
-      <p>Bio: {props.bio}</p>
-      <ProfilePage userData={{ name: props.name, age: props.age, bio: props.bio }} />
+      <p>Name: {userData.name}</p>
+      <p>Email: {userData.email}</p>
     </div>
   );
-};
+}
 
 export default UserProfile;
