@@ -1,0 +1,19 @@
+.btn{
+    background-color: navy;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    /* margin-right: -40px;
+    margin-left: 150px; */
+}
+
+.para{
+    color: rgb(25, 4, 4);
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
