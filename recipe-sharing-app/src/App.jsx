@@ -1,17 +1,19 @@
 import './App.css'
 import AddRecipeForm from './components/AddRecipeForm'
-import DeleteRecipeButton from './components/DeleteRecipeButton'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import RecipeList from './components/RecipeList'
 
 function App() {
 
   return (
     <>
-    <RecipeList />
-    <AddRecipeForm />
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<RecipeList />} />
+        <Route path="/add" element={<AddRecipeForm />} />
+      </Routes>
+    </BrowserRouter>
+    <h1>Recipe Sharing App</h1>
     </>
   )
 }
