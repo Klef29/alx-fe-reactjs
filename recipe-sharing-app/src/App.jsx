@@ -1,5 +1,6 @@
 import './App.css'
 import AddRecipeForm from './components/AddRecipeForm'
+import DeleteRecipeButton from './components/DeleteRecipeButton'
 import RecipeList from './components/RecipeList'
 
 function App() {
