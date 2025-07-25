@@ -1,4 +1,4 @@
-import { useRecipeStore } from '../recipeStore';
+import { useRecipeStore } from './recipeStore';
 import { Link } from 'react-router-dom';
 
 const RecipeList = () => {
@@ -14,6 +14,7 @@ const RecipeList = () => {
               <h3>{recipe.title}</h3>
             </Link>
             <p>{recipe.description.slice(0, 60)}...</p>
+            <FavoriteButton recipeId={recipe.id} /> 
           </li>
         ))}
       </ul>
