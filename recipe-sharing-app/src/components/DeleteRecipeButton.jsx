@@ -1,26 +1,17 @@
-import {useRecipeStore} from './useRecipeStore';
-import {useState} from 'react';
-import {useNavigation} from 'react-router-dom';
+import { useRecipeStore } from './recipeStore'; // Update this path if your store file is named differently
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-
-const DeleteRecipeButton = ({recipeId}) => {
+const DeleteRecipeButton = ({ recipeId }) => {
   const deleteRecipe = useRecipeStore(state => state.deleteRecipe);
-const [isDeleting, setIsDeleting] = useState(false);
-const navigate = useNavigation(
-    () => {
-      if (isDeleting) {
-        return;
-      }
-      setIsDeleting(true);
-      deleteRecipe(recipeId);
-      navigate('/'); // Redirect to the home page after deletion
-    }
-); // This is incorrect, see below
+  const [isDeleting, setIsDeleting] = useState(false);
+  const navigate = useNavigate(); //for redirection
 
   const handleDelete = () => {
     setIsDeleting(true);
     deleteRecipe(recipeId);
     setIsDeleting(false);
+    navigate('/'); //redirect to homepage after deleting
   };
 
   return (
@@ -28,5 +19,6 @@ const navigate = useNavigation(
       {isDeleting ? 'Deleting...' : 'Delete Recipe'}
     </button>
   );
-}   
+};
+
 export default DeleteRecipeButton;
