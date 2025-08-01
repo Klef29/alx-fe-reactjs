@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 import './App.css'
 import Home from './components/Home'
+import SearchUsers from './components/Search.jsx';
 
 const router = createBrowserRouter([
   {
@@ -14,8 +15,10 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />  
-      <h1>App Component</h1>
-      <p>This is the main application component.</p>
+      <div>
+      <h2 style={{ textAlign: 'center', marginTop: '20px', color: 'blue' }}>Search User</h2>
+      <SearchUsers />
+    </div>
     </>
   )
 } 
