@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import data from "../data.json";
+import recipesData from "../data.json";
 import "../index.css"; // Ensure Tailwind CSS is imported
 
 const HomePage = () => {
@@ -7,7 +7,7 @@ const HomePage = () => {
 
   useEffect(() => {
     // Simulate fetching data from a JSON file
-    setRecipes(data);
+    setRecipes(recipesData);
   }, []);
 
   return (
@@ -32,7 +32,7 @@ const HomePage = () => {
               <p className="text-gray-600">{recipe.summary}</p>
               <a
                 href={`/recipe/${recipe.id}`}
-                className="text-blue-600 hover:underline mt-4 inline-block"
+                className="text-red-600 hover:underline mt-4 inline-block font-medium"
               >
                 View Recipe →
               </a>

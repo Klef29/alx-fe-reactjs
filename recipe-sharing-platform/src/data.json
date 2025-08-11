@@ -3,24 +3,81 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://images.pexels.com/photos/9986235/pexels-photo-9986235.jpeg"
+    "image": "https://images.pexels.com/photos/9986235/pexels-photo-9986235.jpeg",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta or bacon",
+      "2 large eggs",
+      "50g grated Parmesan",
+      "Black pepper",
+      "Salt"
+    ],
+    "instructions": [
+      "Boil the pasta in salted water until al dente.",
+      "Fry the pancetta/bacon until crisp.",
+      "Beat eggs in a bowl and add grated Parmesan.",
+      "Drain pasta, mix with pancetta, then add egg mixture.",
+      "Stir quickly and serve immediately."
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato-based gravy.",
-    "image": "https://images.pexels.com/photos/4198930/pexels-photo-4198930.jpeg"
+    "image": "https://images.pexels.com/photos/4198930/pexels-photo-4198930.jpeg",
+    "ingredients": [
+      "500g chicken breast, cubed",
+      "1 cup yogurt",
+      "2 tbsp tikka masala paste",
+      "1 onion, chopped",
+      "1 cup tomato puree",
+      "1/2 cup cream",
+      "Salt and spices"
+    ],
+    "instructions": [
+      "Marinate chicken in yogurt and tikka paste for 1 hour.",
+      "Grill or fry chicken pieces until cooked.",
+      "Sauté onions, add tomato puree and spices.",
+      "Add grilled chicken and cream, simmer for 10 minutes.",
+      "Serve with rice or naan."
+    ]
   },
   {
     "id": 3,
     "title": "Avocado Toast",
     "summary": "Toasted bread topped with mashed avocado, olive oil, salt, and pepper.",
-    "image": "https://images.pexels.com/photos/33367169/pexels-photo-33367169.jpeg"
+    "image": "https://images.pexels.com/photos/33367169/pexels-photo-33367169.jpeg",
+    "ingredients": [
+      "2 slices of bread",
+      "1 ripe avocado",
+      "Salt and pepper to taste",
+      "Olive oil",
+      "Optional toppings: cherry tomatoes, radishes, or poached egg"
+    ],
+    "instructions": [
+      "Toast the bread slices until golden brown.",
+      "Mash the avocado in a bowl and season with salt and pepper.",
+      "Spread the mashed avocado on the toasted bread.",
+      "Drizzle with olive oil and add any optional toppings.",
+      "Serve immediately."
+    ]
   },
-    {
-        "id": 4,
-        "title": "Caesar Salad",
-        "summary": "A fresh salad with romaine lettuce, croutons, parmesan cheese, and Caesar dressing.",
-        "image": "https://images.pexels.com/photos/4346328/pexels-photo-4346328.jpeg"
-    }
+  {
+    "id": 4,
+    "title": "Caesar Salad",
+    "summary": "A fresh salad with romaine lettuce, croutons, parmesan cheese, and Caesar dressing.",
+    "image": "https://images.pexels.com/photos/4346328/pexels-photo-4346328.jpeg",
+    "ingredients": [
+      "Romaine lettuce",
+      "Croutons",
+      "Parmesan cheese",
+      "Caesar dressing"
+    ],
+    "instructions": [
+      "Chop the romaine lettuce and place it in a bowl.",
+      "Add croutons and grated Parmesan cheese.",
+      "Drizzle with Caesar dressing and toss to combine.",
+      "Serve immediately."
+    ]
+  }
 ]
