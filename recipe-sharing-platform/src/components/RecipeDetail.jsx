@@ -12,12 +12,12 @@ const RecipeDetail = () => {
   }, [id]);
 
   if (!recipe) {
-    return <p className="text-center text-gray-600 mt-10">Recipe not found.</p>;
+    return <p className="text-center text-red-600 mt-10">Recipe not found.</p>;
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <Link to="/" className="text-blue-500 hover:underline mb-4 inline-block">
+    <div className="max-w-4xl mx-auto p-6 shadow-lg rounded bg-white">
+      <Link to="/" className="text-red-500 hover:underline mb-4 inline-block">
         ← Back to Home
       </Link>
       <img
