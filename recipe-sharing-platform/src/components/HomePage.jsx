@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import recipesData from "../data.json";
-import "../index.css"; // Ensure Tailwind CSS is imported
+import "../index.css";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const [recipes, setRecipes] = useState([]);
@@ -30,12 +31,13 @@ const HomePage = () => {
             <div className="p-4">
               <h2 className="text-xl font-semibold mb-2">{recipe.title}</h2>
               <p className="text-gray-600">{recipe.summary}</p>
-              <a
-                href={`/recipe/${recipe.id}`}
+
+              <Link
+                to={`/recipe/${recipe.id}`}
                 className="text-red-600 hover:underline mt-4 inline-block font-medium"
               >
                 View Recipe →
-              </a>
+              </Link>
             </div>
           </div>
         ))}
