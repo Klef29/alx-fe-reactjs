@@ -47,15 +47,15 @@ const AddRecipeForm = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white rounded shadow mt-10">
-      <h2 className="text-2xl font-bold mb-4">Add a New Recipe</h2>
+    <div className="max-w-lg mx-auto p-6 bg-white rounded shadow mt-10 md:mt-20 sm:mt-10 xl:mt-20">
+      <h2 className="text-2xl font-bold mb-4 text-center">Add a New Recipe</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Recipe Title"
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded md:mb-4 sm:mb-4 xl:mb-4"
         />
         {errors.title && <p className="text-red-500">{errors.title}</p>}
 
@@ -63,7 +63,7 @@ const AddRecipeForm = () => {
           value={ingredients}
           onChange={(e) => setIngredients(e.target.value)}
           placeholder="Ingredients (comma separated)"
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded md:mb-4 sm:mb-4 xl:mb-4"
           rows="3"
         ></textarea>
         {errors.ingredients && <p className="text-red-500">{errors.ingredients}</p>}
@@ -72,14 +72,14 @@ const AddRecipeForm = () => {
           value={steps}
           onChange={(e) => setSteps(e.target.value)}
           placeholder="Preparation Steps"
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded md:mb-4 sm:mb-4 xl:mb-4"
           rows="5"
         ></textarea>
         {errors.steps && <p className="text-red-500">{errors.steps}</p>}
 
         <button
           type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 md:flex md:justify-center md:items-center md:w-full"
         >
           Submit Recipe
         </button>
