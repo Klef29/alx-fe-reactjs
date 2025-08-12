@@ -79,5 +79,49 @@
       "Drizzle with Caesar dressing and toss to combine.",
       "Serve immediately."
     ]
+  },
+  {
+    "id": 5,
+    "title": "Chocolate Chip Cookies",
+    "summary": "Classic cookies with chocolate chips, perfect for any occasion.",
+    "image": "https://images.pexels.com/photos/9986235/pexels-photo-9986235.jpeg",
+    "ingredients": [
+      "1 cup butter, softened",
+      "1 cup brown sugar",
+      "1/2 cup white sugar",
+      "2 eggs",
+      "2 cups all-purpose flour",
+      "1 tsp baking soda",
+      "2 cups chocolate chips"
+    ],
+    "instructions": [
+      "Preheat oven to 350°F (175°C).",
+      "Cream together butter, brown sugar, and white sugar.",
+      "Beat in eggs one at a time.",
+      "Combine flour and baking soda, then gradually add to the creamed mixture.",
+      "Stir in chocolate chips.",
+      "Drop by spoonfuls onto ungreased baking sheets.",
+      "Bake for 10-12 minutes or until golden brown."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Vegetable Stir-Fry",
+    "summary": "A quick and healthy stir-fry with mixed vegetables and soy sauce.",
+    "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg",
+    "ingredients": [
+      "2 cups mixed vegetables (bell peppers, broccoli, carrots)",
+      "2 tbsp soy sauce",
+      "1 tbsp olive oil",
+      "1 clove garlic, minced",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Heat olive oil in a pan over medium heat.",
+      "Add minced garlic and sauté for 30 seconds.",
+      "Add mixed vegetables and stir-fry for 5-7 minutes.",
+      "Pour in soy sauce, season with salt and pepper, and cook for another 2 minutes.",
+      "Serve hot."
+    ]
   }
 ]
