@@ -1,44 +1,81 @@
-import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
+import React, { useState } from 'react';
 
-const validationSchema = Yup.object({
-  username: Yup.string().required('Username is required'),
-  email: Yup.string().email('Invalid email format').required('Email is required'),
-  password: Yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
-});
+const RegistrationForm = () => {
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState({});
 
-const FormikForm = () => {
+  const validate = () => {
+    const newErrors = {};
+    if (!username) newErrors.username = 'Username is required';
+    if (!email) {
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = 'Invalid email format';
+    }
+    if (!password) {
+      newErrors.password = 'Password is required';
+    } else if (password.length < 6) {
+      newErrors.password = 'Password must be at least 6 characters';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validate()) return;
+
+    console.log('User registered:', { username, email, password });
+
+    setUsername('');
+    setEmail('');
+    setPassword('');
+    setErrors({});
+  };
+
   return (
     <div className="max-w-md mx-auto">
-      <h2 className="text-2xl font-bold mb-4">Formik Registration Form</h2>
-      <Formik
-        initialValues={{ username: '', email: '', password: '' }}
-        validationSchema={validationSchema}
-        onSubmit={(values) => {
-          console.log('Formik submitted:', values);
-        }}
-      >
-        <Form className="space-y-4">
-          <label htmlFor="username">Username:</label>
-          <Field type="text" id="username" name="username" className="border border-gray-300 p-2 w-full" />
-          <ErrorMessage name="username" component="p" className="text-red-500" />
+      <h2 className="text-2xl font-bold mb-4">Controlled Registration Form</h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <label htmlFor="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          className="border border-gray-300 p-2 w-full"
+        />
+        {errors.username && <p className="text-red-500">{errors.username}</p>}
 
-          <label htmlFor="email">Email:</label>
-          <Field type="email" id="email" name="email" className="border border-gray-300 p-2 w-full" />
-          <ErrorMessage name="email" component="p" className="text-red-500" />
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="border border-gray-300 p-2 w-full"
+        />
+        {errors.email && <p className="text-red-500">{errors.email}</p>}
 
-          <label htmlFor="password">Password:</label>
-          <Field type="password" id="password" name="password" className="border border-gray-300 p-2 w-full" />
-          <ErrorMessage name="password" component="p" className="text-red-500" />
+        <label htmlFor="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="border border-gray-300 p-2 w-full"
+        />
+        {errors.password && <p className="text-red-500">{errors.password}</p>}
 
-          <button type="submit" className="bg-green-500 text-white py-2 px-4 rounded">
-            Register
-          </button>
-        </Form>
-      </Formik>
+        <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded">
+          Register
+        </button>
+      </form>
     </div>
   );
 };
 
-export default FormikForm;
+export default RegistrationForm;
