@@ -60,7 +60,7 @@ const Search = () => {
       {loading && <p className="mt-4 text-gray-600">Loading...</p>}
       {error && <p className="mt-4 text-red-600">Looks like we can't find the user</p>}
 
-      <div className="mt-6 space-y-4">
+      <div className="mt-6 space-y-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {users.map((user) => (
           <div key={user.id} className="p-4 border rounded shadow">
             <img src={user.avatar_url} alt={user.login} className="w-16 h-16 rounded-full" />
