@@ -1,10 +1,14 @@
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";  
 
-import { Navigate } from "react-router-dom"
-import { checkAuth } from "../services/fakeAuth"
+const ProtectedRoute = ({ children }) => {
+  const { isAuthenticated } = useAuth();
 
-export default function ProtectedRoute({ children }) {
-  if (!checkAuth()) {
-    return <Navigate to="/login" replace />
+  if (!isAuthenticated) {
+    return <Navigate to="/login" replace />;
   }
-  return children
-}
+
+  return children;
+};
+
+export default ProtectedRoute;
