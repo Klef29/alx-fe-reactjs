@@ -20,9 +20,13 @@ test("adds a new todo", () => {
 test("toggles a todo", () => {
   render(<TodoList />);
   const todo = screen.getByText("Learn React");
-  fireEvent.click(todo);
-  expect(todo).toHaveStyle("text-decoration: line-through");
+
+  fireEvent.click(todo); // click the span
+  const parentLi = todo.closest("li"); // get the <li> that has the style
+
+  expect(parentLi).toHaveStyle("text-decoration: line-through");
 });
+
 
 test("deletes a todo", () => {
   render(<TodoList />);

@@ -22,7 +22,7 @@ const TodoList = () => {
   };
 
   const deleteTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
+    setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
   };
 
   return (
@@ -39,17 +39,18 @@ const TodoList = () => {
         {todos.map((todo) => (
           <li
             key={todo.id}
-            onClick={() => toggleTodo(todo.id)}
             style={{
               textDecoration: todo.completed ? "line-through" : "none",
               cursor: "pointer",
             }}
           >
-            {todo.text}
-            <button onClick={(e) => { 
-              e.stopPropagation(); // prevents toggle when deleting
-              deleteTodo(todo.id);
-            }}>
+            <span onClick={() => toggleTodo(todo.id)}>{todo.text}</span>
+            <button
+              onClick={(e) => {
+                e.stopPropagation(); // stop toggle
+                deleteTodo(todo.id);
+              }}
+            >
               Delete
             </button>
           </li>
